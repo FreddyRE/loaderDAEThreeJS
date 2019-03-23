@@ -28,6 +28,8 @@ var noElemnts5 = [];
 var strElements5 = [];
 var dictUrls = [];
 
+let newObj = new Object()
+
 function getkeys1() {
     
     noElemnts1.push(eval(strO).length);
@@ -159,9 +161,9 @@ function findAllKeys(){
 
     for(let i in generalIndex){
         
-        let newObj = new Object()
-        
-        newObj[eval(generalIndex[i]).name] = generalIndex[i]
-        console.log(newObj)
+        newObj[eval(generalIndex[i]).name] = {
+            path:generalIndex[i],
+        }
+
     }
 }
